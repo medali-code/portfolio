@@ -61,7 +61,7 @@ interface Course {
               <h1 class="hero-title">
                 Créateur<br>
                 d'Expériences<br>
-                <span class="gradient-text text-white">Digitales Exceptionnelles</span>
+                <span class="text-white">Digitales Exceptionnelles</span>
               </h1>
               <p class="hero-subtitle">
                 Je suis <strong>{{config.name}}</strong>, Développeur Full-Stack & UI/UX Designer basé à {{config.location}}. 
