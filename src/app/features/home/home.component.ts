@@ -318,6 +318,7 @@ interface Course {
       margin: 0 auto;
       padding: 0 2rem;
     }
+      
 .cv-viewer {
   position: fixed;
   top: 0;
@@ -1415,6 +1416,7 @@ iframe {
         padding: 1.5rem;
       }
     }
+      
   `]
 })
 export class HomeComponent implements OnInit {
