@@ -15,7 +15,7 @@ import { Project } from '../../../services/data.service';
       </div>
       <p style="color:#dbeafe; line-height:1.6; margin-bottom:.75rem;">{{ project.description }}</p>
       <div style="margin:.75rem 0;">
-        <span style="color:#86efac; font-size:.9rem; display:block; margin-bottom:.5rem;">Technologies clés :</span>
+        <span style="color:#86efac; font-size:.9rem; display:block; margin-bottom:.5rem;">Key Technologies:</span>
         <div style="display:flex; flex-wrap:wrap; gap:.4rem;">
           <span *ngFor="let t of project.tech" class="badge">{{t}}</span>
         </div>

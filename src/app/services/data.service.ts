@@ -34,71 +34,71 @@ export type Language = {
 export class DataService {
   private projects: Project[] = [
     {
-      title: "TennisDreamer – Application web de gestion d'académie de tennis",
-      period: "Mar. 2025 - Août 2025",
-      location: "Projet Personnel Full-Stack, Gabès, Tunisie",
-      description: "Gestion de 4 profils utilisateurs et 3 espaces distincts avec authentification sécurisée et automatisation des réservations",
+      title: "TennisDreamer – Tennis Academy Management Web Application",
+      period: "Mar. 2025 - Aug. 2025",
+      location: "Full-Stack Personal Project, Gabès, Tunisia",
+      description: "Management of 4 user profiles and 3 distinct spaces with secure authentication and automated booking system",
       tech: ["Angular", "NestJS", "PHPMyAdmin", "MySQL", "Swagger", "Bootstrap", "Git"],
-      impact: "Réduction estimée de 30 % du temps administratif"
+      impact: "Estimated 30% reduction in administrative time"
     },
     {
-      title: "VroomStat – Application web de gestion des constats d'accidents",
+      title: "VroomStat – Accident Report Management Web Application",
       period: "Jan. 2025 - Mar. 2025",
-      location: "Freelance, Gabès, Tunisie",
-      description: "Conception UML, APIs backend et interface responsive pour la gestion des accidents",
+      location: "Freelance, Gabès, Tunisia",
+      description: "UML design, backend APIs and responsive interface for accident management",
       tech: ["Angular", "NestJS", "PHPMyAdmin", "MySQL", "Swagger", "Bootstrap", "Git"],
-      impact: "Solution complète de gestion des constats"
+      impact: "Complete accident report management solution"
     },
     {
-      title: "Ejrili – Application web de remorquage (Projet de fin d'études)",
-      period: "Mai 2023",
-      location: "L'Institut Supérieur de Gestion de Gabès, Gabès, Tunisie",
-      description: "Conception et modélisation d'une architecture UML avancée (cas d'utilisation, classes) adaptée à plusieurs profils utilisateurs. Mise en place d'une authentification multi-rôles (4 profils) avec contrôle d'accès et gestion de 3 interfaces principales.",
+      title: "Ejrili – Towing Web Application (Final Year Project)",
+      period: "May 2023",
+      location: "Higher Institute of Management of Gabès, Gabès, Tunisia",
+      description: "Design and modeling of advanced UML architecture (use cases, classes) adapted to multiple user profiles. Implementation of multi-role authentication (4 profiles) with access control and management of 3 main interfaces.",
       tech: ["Angular", "Node.js", "Express", "MongoDB"],
-      impact: "MEAN Stack - 4 profils utilisateurs"
+      impact: "MEAN Stack - 4 user profiles"
     },
     {
-      title: "B.A.M - Site E-commerce de vente de vêtements",
-      period: "Août 2022",
-      location: "Centre de Formation ENTIC, Gabès - Tunisie",
-      description: "Développement de trois interfaces de consultation produit. Mise en page responsive et respect des bonnes pratiques front-end",
+      title: "B.A.M - E-commerce Clothing Store Website",
+      period: "Aug. 2022",
+      location: "ENTIC Training Center, Gabès - Tunisia",
+      description: "Development of three product consultation interfaces. Responsive layout and adherence to front-end best practices",
       tech: ["HTML5", "CSS3", "JavaScript"],
-      impact: "Design responsive et bonnes pratiques"
+      impact: "Responsive design and best practices"
     }
   ];
 
   private experiences: Experience[] = [
     {
-      title: "Stage Développeur Full-Stack",
+      title: "Full-Stack Developer Intern",
       company: "Barsha Technology",
-      period: "Oct. 2024 - Août 2025",
-      location: "Gabès, Tunisie",
+      period: "Oct. 2024 - Aug. 2025",
+      location: "Gabès, Tunisia",
       tasks: [
-        "Développement front-end Angular et back-end NestJS avec intégration d'API REST et gestion des données MySQL",
-        "Création, documentation et tests automatisés des API avec Swagger",
-        "Technologies clés : Angular, NestJS, MySQL, Swagger, API REST"
+        "Angular front-end and NestJS back-end development with REST API integration and MySQL data management",
+        "API creation, documentation and automated testing with Swagger",
+        "Key technologies: Angular, NestJS, MySQL, Swagger, REST API"
       ]
     },
     {
-      title: "Stage Développeur Front-End",
+      title: "Front-End Developer Intern",
       company: "DigiLife",
-      period: "Juil. 2024 - Août 2024",
-      location: "Gabès, Tunisie",
+      period: "Jul. 2024 - Aug. 2024",
+      location: "Gabès, Tunisia",
       tasks: [
-        "Implémentation de pages front (HTML/CSS/JS) et optimisation des performances front",
-        "Mise en place de layouts responsives et bonnes pratiques front",
-        "Technologies clés : HTML5, CSS3, JavaScript"
+        "Front-end page implementation (HTML/CSS/JS) and front-end performance optimization",
+        "Implementation of responsive layouts and front-end best practices",
+        "Key technologies: HTML5, CSS3, JavaScript"
       ]
     },
     {
-      title: "Stage en Gestion des Données Financières",
-      company: "Société Régionale de Transport",
-      period: "Août 2021 - Sept. 2021",
-      location: "Gabès, Tunisie",
+      title: "Financial Data Management Intern",
+      company: "Regional Transport Company",
+      period: "Aug. 2021 - Sep. 2021",
+      location: "Gabès, Tunisia",
       tasks: [
-        "Traitement et analyse de données financières sous Excel",
-        "Préparation de rapports périodiques",
-        "Techniques clés : Excel (formules, tableaux croisés dynamiques)"
+        "Processing and analysis of financial data in Excel",
+        "Preparation of periodic reports",
+        "Key techniques: Excel (formulas, pivot tables)"
       ]
     }
   ];
@@ -111,65 +111,65 @@ export class DataService {
   };
 
   private softSkills = [
-    "Autonomie et organisation",
-    "Gestion de projet agile",
-    "Travail en équipe et communication efficace",
-    "Résolution de problèmes complexes"
+    "Autonomy and organization",
+    "Agile project management",
+    "Teamwork and effective communication",
+    "Complex problem-solving"
   ];
 
   private certifications: Certification[] = [
     {
-      title: "Hackathon Hack4Food",
-      organization: "ISIM Gabès et JCI-Gabès"
+      title: "Hack4Food Hackathon",
+      organization: "ISIM Gabès and JCI-Gabès"
     },
     {
-      title: "Python Masterclass pour débutants",
+      title: "Python Masterclass for Beginners",
       organization: "Udemy"
     },
     {
-      title: "La MEAN Stack par la pratique",
+      title: "MEAN Stack in Practice",
       organization: "Udemy"
     },
-     { 
-      title: "FIGMA : Le Cours Complet pour Designer UI / UX 2025 ",
+    { 
+      title: "FIGMA: The Complete Course for UI/UX Design 2025",
       organization: "Udemy"
     },
     {
-      title: "Formation approfondie en développement web",
+      title: "In-depth Web Development Training",
       organization: "ENTIC Gabès"
     }
   ];
 
   private languages: Language[] = [
     {
-      name: "Arabe",
-      level: "Langue maternelle"
+      name: "Arabic",
+      level: "Native language"
     },
     {
-      name: "Français",
-      level: "B1 : Compétence professionnelle",
-      details: "TCF : 391/699"
+      name: "French",
+      level: "B1: Professional proficiency",
+      details: "TCF: 391/699"
     },
     {
-      name: "Anglais",
-      level: "Intermédiaire"
+      name: "English",
+      level: "Intermediate"
     }
   ];
 
   private education = [
     {
-      degree: "Master en E-Commerce",
-      institution: "Institut Supérieur de Gestion (ISG), Gabès, Tunisie",
+      degree: "Master's in E-Commerce",
+      institution: "Higher Institute of Management (ISG), Gabès, Tunisia",
       period: "2024 - 2025"
     },
     {
-      degree: "Licence en Informatique Appliquée à la Gestion",
-      institution: "L'Institut Supérieur de Gestion, Gabès, Tunisie",
+      degree: "Bachelor's in Computer Science Applied to Management",
+      institution: "Higher Institute of Management, Gabès, Tunisia",
       period: "2022 - 2023"
     },
     {
-      degree: "Baccalauréat en Economie et Gestion",
-      institution: "Lycée secondaire Manara, Gabès, Tunisie",
+      degree: "Baccalaureate in Economics and Management",
+      institution: "Manara High School, Gabès, Tunisia",
       period: "2019 - 2020"
     }
   ];

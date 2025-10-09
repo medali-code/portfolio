@@ -35,10 +35,10 @@ interface Course {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule,CommonModule],
+  imports: [RouterModule, CommonModule],
   template: `
   <!-- Hero Section -->
-    <section id="home" class="hero-section" aria-label="Section d'accueil">
+    <section id="home" class="hero-section" aria-label="Home section">
       <div class="hero-background" aria-hidden="true">
         <div class="floating-shapes" aria-hidden="true">
           <div class="shape shape-1"></div>
@@ -49,43 +49,39 @@ interface Course {
         <div class="gradient-overlay" aria-hidden="true"></div>
       </div>
 
-      <!-- hero-inner: contenu centré mais fond full-width -->
+      <!-- hero-inner: centered content but full-width background -->
       <div class="hero-inner">
         <div class="hero-content">
           <div class="hero-grid">
             <div class="hero-text">
               <div class="badge" role="status" aria-live="polite">
                 <span class="badge-icon" aria-hidden="true">🚀</span>
-                <span>Disponible pour de nouveaux projets</span>
+                <span>Available for new projects</span>
               </div>
               <h1 class="hero-title">
-                Créateur<br>
-                d'Expériences<br>
-                <span class="text-white">Digitales Exceptionnelles</span>
+                Creator of<br>
+                Exceptional<br>
+                <span class="text-white">Digital Experiences</span>
               </h1>
               <p class="hero-subtitle">
-                Je suis <strong>{{config.name}}</strong>, Développeur Full-Stack & UI/UX Designer basé à {{config.location}}. 
-                Je transforme des idées en interfaces digitales élégantes et performantes.
+                I'm <strong>{{config.name}}</strong>, Full-Stack Developer & UI/UX Designer based in {{config.location}}. 
+                I transform ideas into elegant and high-performing digital interfaces.
               </p>
               
-                
-            
-              
-
               <div class="hero-actions">
-              <button class="btn-primary" [routerLink]="['/projects']" aria-label="Voir mes projets">
-  <span>Voir mes Projets</span>
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-    <path d="M5 12h14M12 5l7 7-7 7"/>
-  </svg>
-</button>
+                <button class="btn-primary" [routerLink]="['/projects']" aria-label="View my projects">
+                  <span>View My Projects</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
 
-<button class="btn-secondary" [routerLink]="['/contact']" aria-label="Me contacter">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-  </svg>
-  <span>Discutons</span>
-</button>
+                <button class="btn-secondary" [routerLink]="['/contact']" aria-label="Contact me">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                  </svg>
+                  <span>Let's Talk</span>
+                </button>
               </div>
             </div>
             
@@ -100,14 +96,14 @@ interface Course {
               </div>
               <div class="floating-card card-3" aria-hidden="true">
                 <div class="card-icon" aria-hidden="true">🔒</div>
-                <div class="card-text">Sécurité</div>
+                <div class="card-text">Security</div>
               </div>
               
-              <div class="hero-image-container" role="group" aria-label="Photo de profil et éléments visuels">
-                <div class="image-frame" role="img" [attr.aria-label]="config.name + ' - Photo de profil'">
+              <div class="hero-image-container" role="group" aria-label="Profile photo and visual elements">
+                <div class="image-frame" role="img" [attr.aria-label]="config.name + ' - Profile photo'">
                   <img 
                     [src]="config.profileImage ?? 'assets/images/mohamedAli.jpg'" 
-                    [alt]="config.name + ' - Photo de profil'" 
+                    [alt]="config.name + ' - Profile photo'" 
                     class="hero-image"
                     (error)="onImageError($event)"
                   />
@@ -124,9 +120,9 @@ interface Course {
     <section id="services" class="services-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Mes Services</h2>
+          <h2 class="section-title">My Services</h2>
           <p class="section-subtitle">
-            Des solutions sur mesure pour transformer votre vision en réalité digitale
+            Tailor-made solutions to transform your vision into digital reality
           </p>
         </div>
 
@@ -142,7 +138,6 @@ interface Course {
             </div>
             <h3 class="service-title">{{service.title}}</h3>
             <p class="service-description">{{service.description}}</p>
-           
           </div>
         </div>
       </div>
@@ -153,9 +148,9 @@ interface Course {
       <div class="container">
         <div class="process-content">
           <div class="process-text">
-            <h2 class="section-title">Mon Processus Créatif</h2>
+            <h2 class="section-title">My Creative Process</h2>
             <p class="section-subtitle">
-              Une approche méthodique pour garantir l'excellence à chaque étape de votre projet
+              A methodical approach to ensure excellence at every stage of your project
             </p>
             <br>
             <div class="process-steps">
@@ -196,9 +191,9 @@ interface Course {
     <section id="clients" class="clients-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Ils me font Confiance</h2>
+          <h2 class="section-title">They Trust Me</h2>
           <p class="section-subtitle">
-            Des collaborations qui dépassent les attentes
+            Collaborations that exceed expectations
           </p>
         </div>
 
@@ -221,61 +216,61 @@ interface Course {
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" aria-label="Appel à l'action">
+    <section class="cta-section" aria-label="Call to action">
       <div class="cta-background" aria-hidden="true">
         <div class="cta-glow"></div>
       </div>
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Prêt à donner vie à votre projet ?</h2>
+          <h2 class="cta-title">Ready to bring your project to life?</h2>
           <p class="cta-description">
-            Discutons de votre vision et créons ensemble quelque chose d'extraordinaire
+            Let's discuss your vision and create something extraordinary together
           </p>
           <div class="cta-actions">
             <button 
-  class="btn-cta-primary" 
-  (click)="navigateToContact()" 
-  aria-label="Commencer un projet">
-  <span>Commencer un Projet</span>
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-    <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-  </svg>
-</button>
+              class="btn-cta-primary" 
+              (click)="navigateToContact()" 
+              aria-label="Start a project">
+              <span>Start a Project</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
             <button 
-  class="btn-cta-secondary" 
-  aria-label="Voir mon CV"
-  (click)="showCV()"
->
-  <span>Voir mon CV</span>
-</button>
+              class="btn-cta-secondary" 
+              aria-label="View my resume"
+              (click)="showCV()"
+            >
+              <span>View My Resume</span>
+            </button>
 
-<!-- Modal ou section pour afficher le CV -->
-<div class="cv-viewer" *ngIf="isCVVisible">
-  <div class="cv-overlay" (click)="closeCV()"></div>
-  <div class="cv-container">
-    <button class="close-btn" (click)="closeCV()">×</button>
-    <iframe 
-      src="assets/documents/CV_Mohamed_Ali_Ben_Jaber.pdf" 
-      width="100%" 
-      height="100%"
-      frameborder="0"
-    ></iframe>
-    <a 
-      href="assets/documents/CV_Mohamed_Ali_Ben_Jaber.pdf" 
-      download="CV_Mohamed_Ali_Ben_Jaber.pdf"
-      class="download-btn"
-    >
-      Télécharger le CV
-    </a>
-  </div>
-</div>
+            <!-- Modal or section to display CV -->
+            <div class="cv-viewer" *ngIf="isCVVisible">
+              <div class="cv-overlay" (click)="closeCV()"></div>
+              <div class="cv-container">
+                <button class="close-btn" (click)="closeCV()">×</button>
+                <iframe 
+                  src="assets/documents/CV_Mohamed_Ali_Ben_Jaber.pdf" 
+                  width="100%" 
+                  height="100%"
+                  frameborder="0"
+                ></iframe>
+                <a 
+                  href="assets/documents/CV_Mohamed_Ali_Ben_Jaber.pdf" 
+                  download="CV_Mohamed_Ali_Ben_Jaber.pdf"
+                  class="download-btn"
+                >
+                  Download Resume
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Scroll to Top Button -->
-    <button class="scroll-top" [class.visible]="isScrolled" (click)="scrollToTop()" aria-label="Remonter en haut">
+    <button class="scroll-top" [class.visible]="isScrolled" (click)="scrollToTop()" aria-label="Scroll to top">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <path d="M18 15l-6-6-6 6"/>
       </svg>
@@ -319,185 +314,137 @@ interface Course {
       padding: 0 2rem;
     }
       
-.cv-viewer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 0.3s ease;
-  padding: 60px 20px 20px 20px;
-}
+    .cv-viewer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+      padding: 60px 20px 20px 20px;
+    }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
-.cv-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(5px);
-}
+    .cv-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(5px);
+    }
 
-.cv-container {
-  position: relative;
-  width: 90%;
-  max-width: 900px;
-  height: calc(100vh - 140px);
-  max-height: 700px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  animation: scaleIn 0.3s ease;
-  margin-top: 20px;
-}
+    .cv-container {
+      position: relative;
+      width: 90%;
+      max-width: 900px;
+      height: calc(100vh - 140px);
+      max-height: 700px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      animation: scaleIn 0.3s ease;
+      margin-top: 20px;
+    }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 36px;
-  height: 36px;
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0.95);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1003;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  color: #333;
-  font-weight: 300;
-  line-height: 1;
-}
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+      font-size: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1003;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      color: #333;
+      font-weight: 300;
+      line-height: 1;
+    }
 
-.close-btn:hover {
-  background: #ff4444;
-  color: white;
-  transform: rotate(90deg) scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
-}
+    .close-btn:hover {
+      background: #ff4444;
+      color: white;
+      transform: rotate(90deg) scale(1.1);
+      box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+    }
 
-iframe {
-  width: 100%;
-  height: calc(100% - 70px);
-  border: none;
-  background: #f5f5f5;
-  flex: 1;
-}
+    iframe {
+      width: 100%;
+      height: calc(100% - 70px);
+      border: none;
+      background: #f5f5f5;
+      flex: 1;
+    }
 
-.download-btn {
-  position: relative;
-  width: 100%;
-  padding: 16px 30px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  text-decoration: none;
-  border: none;
-  font-weight: 600;
-  font-size: 15px;
-  z-index: 1002;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  border-radius: 0 0 16px 16px;
-}
+    .download-btn {
+      position: relative;
+      width: 100%;
+      padding: 16px 30px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border: none;
+      font-weight: 600;
+      font-size: 15px;
+      z-index: 1002;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      border-radius: 0 0 16px 16px;
+    }
 
-.download-btn:hover {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-  box-shadow: 0 -4px 20px rgba(102, 126, 234, 0.4);
-}
+    .download-btn:hover {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+      box-shadow: 0 -4px 20px rgba(102, 126, 234, 0.4);
+    }
 
-.download-btn::before {
-  content: "⬇";
-  font-size: 18px;
-}
+    .download-btn::before {
+      content: "⬇";
+      font-size: 18px;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .cv-viewer {
-    padding: 80px 10px 10px 10px;
-  }
-  
-  .cv-container {
-    width: 95%;
-    height: calc(100vh - 100px);
-    max-height: none;
-    border-radius: 12px;
-    margin-top: 0;
-  }
-  
-  .close-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 20px;
-  }
-  
-  iframe {
-    height: calc(100% - 60px);
-  }
-  
-  .download-btn {
-    padding: 14px 20px;
-    font-size: 14px;
-    border-radius: 0 0 12px 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .cv-viewer {
-    padding: 70px 5px 5px 5px;
-  }
-  
-  .cv-container {
-    width: 98%;
-    height: calc(100vh - 80px);
-    border-radius: 8px;
-  }
-  
-  .download-btn {
-    border-radius: 0 0 8px 8px;
-    padding: 12px 20px;
-  }
-}
-      /* HERO: full-width background while content remains centered */
+    /* HERO: full-width background while content remains centered */
     .hero-section {
       position: relative;
-      /* full viewport width: breakout from centered parent */
       width: 100vw;
       left: 50%;
       right: 50%;
@@ -510,10 +457,9 @@ iframe {
       overflow: hidden;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       z-index: 0;
-      padding: 2rem 0; /* padding to give breathing room on top/bottom */
+      padding: 2rem 0;
     }
 
-    /* internal container to center content inside full-width hero */
     .hero-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -641,28 +587,6 @@ iframe {
       color: var(--text-secondary);
       margin-bottom: 2.5rem;
       line-height: 1.6;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-label {
-      font-size: 0.875rem;
-      color: var(--text-muted);
     }
 
     .hero-actions {
@@ -906,22 +830,6 @@ iframe {
       color: var(--text-secondary);
       line-height: 1.6;
       margin-bottom: 2rem;
-    }
-
-    .service-arrow {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .service-card:hover .service-arrow {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateX(5px);
     }
 
     /* Process Section */
@@ -1319,7 +1227,6 @@ iframe {
       }
 
       .hero-section {
-        /* remove negative margins on small screens to avoid horizontal scroll */
         width: 100%;
         left: 0;
         margin-left: 0;
@@ -1337,14 +1244,6 @@ iframe {
 
       .hero-subtitle {
         font-size: 1.125rem;
-      }
-
-      .hero-stats {
-        gap: 1.5rem;
-      }
-
-      .stat-number {
-        font-size: 1.5rem;
       }
 
       .section-title {
@@ -1387,6 +1286,34 @@ iframe {
         width: 45px;
         height: 45px;
       }
+
+      .cv-viewer {
+        padding: 80px 10px 10px 10px;
+      }
+      
+      .cv-container {
+        width: 95%;
+        height: calc(100vh - 100px);
+        max-height: none;
+        border-radius: 12px;
+        margin-top: 0;
+      }
+      
+      .close-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+      }
+      
+      iframe {
+        height: calc(100% - 60px);
+      }
+      
+      .download-btn {
+        padding: 14px 20px;
+        font-size: 14px;
+        border-radius: 0 0 12px 12px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1415,8 +1342,22 @@ iframe {
       .service-card {
         padding: 1.5rem;
       }
-    }
+
+      .cv-viewer {
+        padding: 70px 5px 5px 5px;
+      }
       
+      .cv-container {
+        width: 98%;
+        height: calc(100vh - 80px);
+        border-radius: 8px;
+      }
+      
+      .download-btn {
+        border-radius: 0 0 8px 8px;
+        padding: 12px 20px;
+      }
+    }
   `]
 })
 export class HomeComponent implements OnInit {
@@ -1425,56 +1366,58 @@ export class HomeComponent implements OnInit {
   navigateToContact() {
     this.router.navigate(['/contact']);
   }
-    navigateToProjects() {
+
+  navigateToProjects() {
     this.router.navigate(['/projects']);
   }
 
-  
   config = APP_CONFIG;
   isScrolled = false;
   isCVVisible = false;
- showCV() {
+
+  showCV() {
     this.isCVVisible = true;
   }
 
   closeCV() {
     this.isCVVisible = false;
   }
+
   services: Service[] = [
     {
       icon: '🎨',
       title: 'UI/UX Design',
-      description: 'Conception d\'interfaces intuitives et d\'expériences utilisateur mémorables qui engagent et convertissent.',
+      description: 'Designing intuitive interfaces and memorable user experiences that engage and convert.',
       gradient: 'linear-gradient(135deg, #6366f1, #8b5cf6)'
     },
     {
       icon: '💻',
-      title: 'Développement Frontend',
-      description: 'Création d\'applications web modernes et réactives avec Angular, React et les dernières technologies.',
+      title: 'Frontend Development',
+      description: 'Creating modern and responsive web applications with Angular, React and the latest technologies.',
       gradient: 'linear-gradient(135deg, #06b6d4, #3b82f6)'
     },
     {
       icon: '⚙️',
-      title: 'Développement Backend',
-      description: 'Architecture solide et APIs performantes pour supporter vos applications les plus exigeantes.',
+      title: 'Backend Development',
+      description: 'Solid architecture and high-performance APIs to support your most demanding applications.',
       gradient: 'linear-gradient(135deg, #f472b6, #d946ef)'
     },
     {
       icon: '📱',
-      title: 'Applications Web',
-      description: 'Développement d\'applications modernes et performantes avec Angular et NestJS',
+      title: 'Web Applications',
+      description: 'Development of modern and high-performance applications with Angular and NestJS',
       gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)'
     },
     {
       icon: '🚀',
-      title: 'Optimisation SEO',
-      description: 'Amélioration des performances et du référencement pour maximiser votre visibilité en ligne.',
+      title: 'SEO Optimization',
+      description: 'Performance and SEO improvements to maximize your online visibility.',
       gradient: 'linear-gradient(135deg, #10b981, #059669)'
     },
     {
       icon: '🔧',
       title: 'Maintenance & Support',
-      description: 'Accompagnement continu et maintenance proactive pour garantir la pérennité de vos projets.',
+      description: 'Continuous support and proactive maintenance to ensure the sustainability of your projects.',
       gradient: 'linear-gradient(135deg, #8b5cf6, #6366f1)'
     }
   ];
@@ -1483,53 +1426,53 @@ export class HomeComponent implements OnInit {
     {
       number: '01',
       icon: '🔍',
-      title: 'Découverte & Analyse',
-      description: 'Compréhension approfondie de votre vision, analyse des besoins et définition des objectifs.',
+      title: 'Discovery & Analysis',
+      description: 'In-depth understanding of your vision, needs analysis and goal definition.',
       color: '#6366f1'
     },
     {
       number: '02',
       icon: '🎨',
-      title: 'Conception & Design',
-      description: 'Création de maquettes interactives et design d\'interface centré sur l\'expérience utilisateur.',
+      title: 'Design & Creation',
+      description: 'Creating interactive mockups and user experience-centered interface design.',
       color: '#06b6d4'
     },
     {
       number: '03',
       icon: '⚙️',
-      title: 'Développement & Intégration',
-      description: 'Développement robuste avec les meilleures pratiques et intégration des fonctionnalités.',
+      title: 'Development & Integration',
+      description: 'Robust development with best practices and feature integration.',
       color: '#f472b6'
     },
     {
       number: '04',
-      title: 'Tests & Livraison',
+      title: 'Testing & Delivery',
       icon: '🚀',
-      description: 'Tests rigoureux, optimisation des performances et déploiement avec suivi post-livraison.',
+      description: 'Rigorous testing, performance optimization and deployment with post-delivery monitoring.',
       color: '#f59e0b'
     }
   ];
-clients: Client[] = [
-  {
-    name: 'Oussema Yahya',
-    logo: '🎓',
-    role: "Étudiant, Institut Supérieur de Gestion de Gabès (ISGG) — PFE Licence",
-    feedback: "Merci pour la réalisation du projet Vroomstat pour mon PFE : livraison conforme, interface ergonomique et accompagnement clair jusqu'à la soutenance."
-  },
-  {
-    name: 'Grand Tennis Club de Gabès',
-    logo: '🎾',
-    role: 'Club sportif — Client pour le projet de mémoire (Master)',
-    feedback: "TennisDreamer : travail professionnel et adapté à notre contexte. L'application facilite la gestion du club, améliore l'engagement des membres et répond parfaitement aux besoins exprimés. Résultat très satisfaisant."
-  },
-  {
-    name: 'DigiLife',
-    logo: '🏢',
-    role: 'Agence — Stage (Projet : B.A.M, site e-commerce)',
-    feedback: "Excellente contribution sur le projet B.A.M. : site e-commerce livré avec qualité, code propre, respect des délais et bonne compréhension des enjeux digitaux."
-  }
-];
 
+  clients: Client[] = [
+    {
+      name: 'Oussema Yahya',
+      logo: '🎓',
+      role: "Student, Higher Institute of Management of Gabès (ISGG) — Bachelor's Degree Final Project",
+      feedback: "Thank you for developing the Vroomstat project for my final project: compliant delivery, ergonomic interface and clear support until the defense."
+    },
+    {
+      name: 'Grand Tennis Club of Gabès',
+      logo: '🎾',
+      role: 'Sports Club — Client for master\'s thesis project',
+      feedback: "TennisDreamer: professional work adapted to our context. The application facilitates club management, improves member engagement and perfectly meets expressed needs. Very satisfactory result."
+    },
+    {
+      name: 'DigiLife',
+      logo: '🏢',
+      role: 'Agency — Internship (Project: B.A.M, e-commerce website)',
+      feedback: "Excellent contribution to the B.A.M project: quality e-commerce website delivered, clean code, respect for deadlines and good understanding of digital issues."
+    }
+  ];
 
   courses: Course[] = [
     {
@@ -1538,14 +1481,12 @@ clients: Client[] = [
       icon: '🅰️',
       progress: 100
     },
-   
     {
       title: 'Node.js Advanced',
       platform: 'Pluralsight',
       icon: '📗',
       progress: 90
-    },
-    
+    }
   ];
 
   ngOnInit() {

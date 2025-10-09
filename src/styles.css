@@ -1,17 +1,18 @@
 /* styles.css - Version Corrigée Complète */
 
 :root {
-  /* Palette de couleurs */
-  --main: #0b2447;
-  --secondary: #1e3a8a;
-  --accent: #3b82f6;
-  --accent-dark: #1d4ed8;
-  --muted: #94a3b8;
-  --card-bg: rgba(15, 23, 42, 0.7);
-  --gradient-start: #0f172a;
-  --gradient-end: #1e293b;
-  --text-primary: #f1f5f9;
-  --text-secondary: #cbd5e1;
+  /* Palette de couleurs - Version claire avec textes clairs */
+  --main: #2563eb;           /* Bleu moyen vif */
+  --secondary: #3b82f6;      /* Bleu clair vif */
+  --accent: #60a5fa;         /* Bleu clair lumineux */
+  --accent-dark: #3b82f6;    /* Bleu moyen */
+  --muted: #cbd5e1;          /* Gris-bleu clair */
+  --card-bg: rgba(30, 58, 138, 0.6);  /* Fond bleu profond semi-transparent */
+  --gradient-start: #1e3a8a; /* Bleu profond */
+  --gradient-end: #2563eb;   /* Bleu moyen vif */
+  --text-primary: #f1f5f9;   /* Texte blanc cassé */
+  --text-secondary: #e2e8f0; /* Texte gris clair */
+
   
   /* Espacements cohérents */
   --spacing-xs: 0.25rem;

@@ -12,8 +12,8 @@ import { APP_CONFIG } from '../../app.config';
       <div class="container">
         <!-- Header -->
         <div class="section-header">
-          <h1 class="main-title">Contactez-moi</h1>
-          <p class="subtitle">Discutons de votre projet et créons quelque chose d'extraordinaire ensemble</p>
+          <h1 class="main-title">Contact Me</h1>
+          <p class="subtitle">Let's discuss your project and create something extraordinary together</p>
         </div>
 
         <!-- Main Content Grid -->
@@ -40,7 +40,7 @@ import { APP_CONFIG } from '../../app.config';
                 </svg>
               </div>
               <div class="card-content">
-                <h3 class="card-title">Téléphone</h3>
+                <h3 class="card-title">Phone</h3>
                 <a [href]="'tel:' + config.phone" class="card-value">{{ config.phone }}</a>
               </div>
             </div>
@@ -53,7 +53,7 @@ import { APP_CONFIG } from '../../app.config';
                 </svg>
               </div>
               <div class="card-content">
-                <h3 class="card-title">Localisation</h3>
+                <h3 class="card-title">Location</h3>
                 <p class="card-value">{{ config.location }}</p>
               </div>
             </div>
@@ -75,7 +75,7 @@ import { APP_CONFIG } from '../../app.config';
             <div class="map-card">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3312.161817977122!2d10.0956429!3d33.8854861!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12556fc50590e317%3A0xf2b4d600b72eaa9f!2zMzI4IEF2LiBGYXJoYXQgSGFjaGFkIC0g2LTYp9ix2Lkg2YHYsdit2KfYqiDYrdi02KfYrywgR2Fiw6hz!5e0!3m2!1sfr!2stn!4v1759242614299!5m2!1sfr!2stn"
-                title="Localisation"
+                title="Location"
                 width="100%"
                 height="300"
                 style="border:0;"
@@ -89,8 +89,8 @@ import { APP_CONFIG } from '../../app.config';
           <!-- Right Side: Contact Form -->
           <div class="form-card">
             <div class="form-header">
-              <h2 class="form-title">Envoyez un message</h2>
-              <p class="form-subtitle">Je vous répondrai dans les plus brefs délais</p>
+              <h2 class="form-title">Send a Message</h2>
+              <p class="form-subtitle">I'll get back to you as soon as possible</p>
             </div>
 
             <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
@@ -101,7 +101,7 @@ import { APP_CONFIG } from '../../app.config';
                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                       <circle cx="12" cy="7" r="4"/>
                     </svg>
-                    Nom complet
+                    Full Name
                   </label>
                   <input 
                     type="text" 
@@ -109,7 +109,7 @@ import { APP_CONFIG } from '../../app.config';
                     name="name"
                     [(ngModel)]="formData.name"
                     required
-                    placeholder="Votre nom"
+                    placeholder="Your name"
                     class="form-input"
                   />
                 </div>
@@ -129,7 +129,7 @@ import { APP_CONFIG } from '../../app.config';
                     [(ngModel)]="formData.email"
                     required
                     email
-                    placeholder="votre.email@exemple.com"
+                    placeholder="your.email@example.com"
                     class="form-input"
                   />
                 </div>
@@ -141,7 +141,7 @@ import { APP_CONFIG } from '../../app.config';
                     <line x1="12" y1="5" x2="12" y2="19"/>
                     <line x1="5" y1="12" x2="19" y2="12"/>
                   </svg>
-                  Sujet
+                  Subject
                 </label>
                 <input 
                   type="text" 
@@ -149,7 +149,7 @@ import { APP_CONFIG } from '../../app.config';
                   name="subject"
                   [(ngModel)]="formData.subject"
                   required
-                  placeholder="Sujet de votre message"
+                  placeholder="Subject of your message"
                   class="form-input"
                 />
               </div>
@@ -167,7 +167,7 @@ import { APP_CONFIG } from '../../app.config';
                   [(ngModel)]="formData.message"
                   required
                   rows="6"
-                  placeholder="Décrivez votre projet ou posez votre question..."
+                  placeholder="Describe your project or ask your question..."
                   class="form-input"
                 ></textarea>
               </div>
@@ -185,8 +185,8 @@ import { APP_CONFIG } from '../../app.config';
                   <line x1="22" y1="2" x2="11" y2="13"/>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                 </svg>
-                <span *ngIf="!isSubmitting">Envoyer le message</span>
-                <span *ngIf="isSubmitting">Envoi en cours...</span>
+                <span *ngIf="!isSubmitting">Send Message</span>
+                <span *ngIf="isSubmitting">Sending...</span>
               </button>
             </form>
           </div>
@@ -665,7 +665,7 @@ export class ContactComponent {
     this.submitStatus = null;
 
     const mailtoLink = `mailto:mohamedalibenjaber205@gmail.com?subject=${encodeURIComponent(this.formData.subject)}&body=${encodeURIComponent(
-      `Nom: ${this.formData.name}\nEmail: ${this.formData.email}\n\nMessage:\n${this.formData.message}`
+      `Name: ${this.formData.name}\nEmail: ${this.formData.email}\n\nMessage:\n${this.formData.message}`
     )}`;
 
     window.location.href = mailtoLink;
@@ -673,7 +673,7 @@ export class ContactComponent {
     setTimeout(() => {
       this.isSubmitting = false;
       this.submitStatus = 'success';
-      this.statusMessage = 'Votre client email a été ouvert. Merci de votre message !';
+      this.statusMessage = 'Your email client has been opened. Thank you for your message!';
       
       this.formData = {
         name: '',

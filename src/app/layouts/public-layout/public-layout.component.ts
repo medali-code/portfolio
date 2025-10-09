@@ -10,19 +10,20 @@ import { APP_CONFIG } from '../../app.config';
   template: `
     <nav class="header">
       <div class="inner">
-        <div class="brand">
-          <div class="logo">MA</div>
-          <div>
-            <div style="font-weight:700">{{config.name}}</div>
-            <div style="font-size:.85rem; color:var(--muted)">{{config.title}}</div>
-          </div>
-        </div>
+         <a class="brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+  <div class="logo">MA</div>
+  <div>
+    <div style="font-weight:700">{{ config.name }}</div>
+    <div style="font-size:.85rem; color:var(--muted)">{{ config.title }}</div>
+  </div>
+</a>
+
 
         <div class="nav-desktop">
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Accueil</a>
-          <a routerLink="/projects" routerLinkActive="active">Projets</a>
-          <a routerLink="/experience" routerLinkActive="active">Expérience</a>
-          <a routerLink="/competences" routerLinkActive="active">Compétences</a>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          <a routerLink="/projects" routerLinkActive="active">Projects</a>
+          <a routerLink="/experience" routerLinkActive="active">Experience</a>
+          <a routerLink="/competences" routerLinkActive="active">Skills</a>
           <a routerLink="/contact" routerLinkActive="active">Contact</a>
         </div>
 
@@ -50,8 +51,7 @@ import { APP_CONFIG } from '../../app.config';
             <div class="footer-brand">
               <h3 class="footer-logo">Mohamed Ali</h3>
               <p class="footer-description">
-                Développeur Full-Stack passionné créant des expériences web exceptionnelles
-              </p>
+              Passionate Full-Stack Developer creating exceptional web experiences              </p>
             </div>
 
             <div class="footer-links">
@@ -90,7 +90,7 @@ import { APP_CONFIG } from '../../app.config';
 
           <div class="footer-bottom">
             <p class="footer-copyright">
-              © {{currentYear}} {{config.name}}. Tous droits réservés.
+              © {{currentYear}} {{config.name}}. All rights reserve.
             </p>
           </div>
         </div>

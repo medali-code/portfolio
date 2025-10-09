@@ -10,7 +10,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
   template: `
     <section style="padding:2.5rem 0;">
       <div style="max-width:1120px; margin:0 auto;">
-        <h2 style="text-align:center; font-size:2rem; margin-bottom:1.25rem;">Projets Personnels</h2>
+        <h2 style="text-align:center; font-size:2rem; margin-bottom:1.25rem;">Personal Projects</h2>
         <div style="display:flex; flex-direction:column; gap:1.5rem;">
           <app-project-detail *ngFor="let p of projects" [project]="p"></app-project-detail>
         </div>
@@ -25,4 +25,3 @@ export class ProjectsComponent implements OnInit {
     this.ds.getProjects().subscribe(p => this.projects = p);
   }
 }
-

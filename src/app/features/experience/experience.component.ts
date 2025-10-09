@@ -9,7 +9,7 @@ import { DataService, Experience } from '../../services/data.service';
   template: `
     <section style="padding:2.5rem 0;">
       <div style="max-width:1000px; margin:0 auto;">
-        <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">Expériences Professionnelles</h2>
+        <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem;">Professional Experience</h2>
         <div style="display:flex; flex-direction:column; gap:1.25rem;">
           <div *ngFor="let e of experiences" class="card">
             <div style="margin-bottom:.75rem;">
@@ -24,7 +24,7 @@ import { DataService, Experience } from '../../services/data.service';
         </div>
 
         <div style="margin-top:2rem;">
-          <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">Parcours Académique</h2>
+          <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">Education</h2>
           <div class="card">
             <div style="display:flex; flex-direction:column; gap:1.25rem;">
               <div *ngFor="let edu of education">

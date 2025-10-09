@@ -8,12 +8,18 @@ export const appConfig: ApplicationConfig = {
 };
 export const APP_CONFIG = {
   name: 'Mohamed Ali Ben Jaber',
-  title: 'Développeur Full-Stack',
+  title: 'Full-Stack Developer',
   email: 'mohamedalibenjaber205@gmail.com',
   phone: '+216 29 148 881',
   github: 'https://github.com/medali-code',
   linkedin: 'https://www.linkedin.com/in/mohamedali-benjaber',
-  location: 'Gabès, Tunisie',
+  location: 'Gabes, Tunisia',
+
+
+
+
+
+
   profileImage: 'assets/images/mohamedAli.jpg'
 
 };
